@@ -1,0 +1,35 @@
+body {    
+    padding: 20px 0px;
+}
+.container {
+    max-width: 600px;
+}
+.form-control {
+    font-size: 1.4rem ;
+    font-weight: 700;
+}
+
+fieldset {
+    border: 2px dashed #aaa !important;
+    padding:1em;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #print-area, #print-area * {
+      visibility: visible;
+    }
+    #print-area input {
+      border: none;
+    }
+    .body {
+        width: 600px !important;
+    }   
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+}

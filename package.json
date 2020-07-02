@@ -1,0 +1,27 @@
+{
+  "name": "wifi-card",
+  "version": "1.0.0",
+  "description": "Let generate a QRCode for auto connect your mobile device on the wifi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/th3conc3pt3ur/wifi-card.git"
+  },
+  "keywords": [
+    "wifi",
+    "qrcode"
+  ],
+  "author": "TheConcepteur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/th3conc3pt3ur/wifi-card/issues"
+  },
+  "homepage": "https://github.com/th3conc3pt3ur/wifi-card#readme",
+  "dependencies": {
+    "qrcode.vue": "^1.7.0",
+    "vue": "^2.6.11"
+  }
+}

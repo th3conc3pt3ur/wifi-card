@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css" media='screen,print'>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1><span role="img" aria-label="antenna-bars">📶</span>&nbsp; WiFi Card</h1>
+                    <p>Print a simple card with your WiFi login details. Tape it to the fridge, keep it in your wallet, etc.</p>
+                    <p>Your WiFi information is never sent to the server. No tracking, analytics, or fingerprinting are used on this website. View the source code.</p>
+                </div>
+            </div>
+            <fieldset id="print-area">
+            <div class="row">
+                <div class="col">
+                    <h1>WiFi Login</h1>
+                    
+                </div>
+            </div>
+            <hr/>
+            <div class="row" id="wrapper">
+                <div class="col-4">
+                    <div id="card">
+                        <qrcode-vue v-bind="qrcode" :value="qrcode" :size="175" level="H"></qrcode-vue>
+                    </div>
+                </div>
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label>NetWork name</label>
+                            <input v-model='ssid' @input="updateQrcode" class="form-control" type="text" maxLength="32" placeholder="WiFi Network name" name="ssid">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input v-model='password' @input="updateQrcode" class="form-control" type="text" maxLength="64" placeholder="Password" name="password">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <p><span role="img" aria-label="mobile-phone">📸📱</span>Point your phone's camera at the QR Code to connect automatically</p>
+                </div>
+            </div>
+            </fieldset>
+            <div class="row mt-5">
+                <div class="col">
+                    <button class='btn btn-primary' onClick='window.print()'>Print</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="node_modules/vue/dist/vue.min.js"></script>
+        <script src="node_modules/qrcode.vue/dist/qrcode.vue.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
