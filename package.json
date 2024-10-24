@@ -22,6 +22,6 @@
   "homepage": "https://github.com/th3conc3pt3ur/wifi-card#readme",
   "dependencies": {
     "qrcode.vue": "^1.7.0",
-    "vue": "^2.6.11"
+    "vue": "^3.0.0"
   }
 }
